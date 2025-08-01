@@ -1,25 +1,24 @@
-#Đề Bài:
-#Viết một chương trình Python để:
+# Tên file: bai_tap_ham_moi.py
 
-#1: Hỏi người dùng nhập vào một chuỗi bất kỳ.
-#2: Duyệt qua từng ký tự trong chuỗi đó.
-#3: Đếm số lượng các loại ký tự sau:
-   #-Chữ cái (bao gồm cả chữ in hoa và chữ thường, ví dụ: 'a', 'B', 'c').
-   #-Chữ số (ví dụ: '0', '1', '9').
-   #-Ký tự đặc biệt (tất cả những ký tự còn lại không phải chữ cái và không phải chữ số, ví dụ: '!', '@', '#', '$', ' ').
-#4: In ra tổng số lượng của mỗi loại ký tự tìm được.
-print("Bài Tập")
-chuoi = input("hãy nhập vào 1 chuỗi : ")
-chu_cai = 0
-chu_so = 0
-ky_tu = 0
-for i in chuoi:
-   if i.isalpha():
-      chu_cai += 1
-   elif i.isdigit():
-      chu_so += 1
-   else: 
-      ky_tu += 1
-print(chu_cai)
-print(chu_so)
-print(ky_tu)
+# ĐỊNH NGHĨA HÀM
+def lay_ten_san_pham():
+    # Hỏi người dùng nhập tên
+    ten = input("Nhập tên SP (gõ 'n' để dừng): ")
+    
+    # KIỂM TRA ĐIỀU KIỆN DỪNG
+    if ten.lower() == "n":
+        return None # Trả về None nếu người dùng muốn dừng nhập
+    
+    return ten # Trả về tên đã nhập nếu không phải 'n'
+
+# GỌI HÀM VÀ SỬ DỤNG KẾT QUẢ
+print("--- CHƯƠNG TRÌNH BẮT ĐẦU ---")
+
+ten_sp = lay_ten_san_pham() # Gọi hàm và lưu kết quả vào biến 'ten_sp'
+
+if ten_sp is None: # Kiểm tra nếu hàm trả về None
+    print("Bạn đã chọn dừng nhập liệu.")
+else:
+    print(f"Bạn vừa nhập tên sản phẩm: {ten_sp}")
+
+print("--- CHƯƠNG TRÌNH KẾT THÚC ---")

@@ -6,9 +6,9 @@
 #   ket_qua = ""            # 2. Tạo biến rỗng để lưu kết quả
 
 for ky_tu in chuoi:     # 3. Duyệt từng ký tự trong chuỗi
-    if <điều_kiện>:     # 4. Kiểm tra điều kiện lọc
+    if điều_kiện:     # 4. Kiểm tra điều kiện lọc
         if ket_qua != "":
-            ket_qua += <ngăn_cách>   # 5. Thêm dấu phân cách nếu cần
+            ket_qua += ngăn_cách   # 5. Thêm dấu phân cách nếu cần
         ket_qua += ky_tu             # 6. Thêm ký tự thỏa điều kiện vào kết quả
 
 # print(ket_qua)          # 7. In ra kết quả cuối cùng
